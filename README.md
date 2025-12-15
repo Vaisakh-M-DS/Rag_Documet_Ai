@@ -1,111 +1,60 @@
-RAG Chatbot – Local LLM (Qwen 2.5)
+# 🤖 RAG Chatbot – Local LLM (Qwen 2.5)
 
-A Retrieval-Augmented Generation (RAG) chatbot that answers questions strictly based on uploaded documents, powered by Qwen 2.5 running locally via Ollama.
-No external APIs. No data leakage.
+A **Retrieval-Augmented Generation (RAG) chatbot** that answers questions **strictly based on uploaded documents**, powered by **Qwen 2.5 running locally via Ollama**.  
+No external APIs. No data leakage. Fully offline and privacy-first.
 
-🚀 Features
+---
 
-📂 Document-based Question Answering
-
-🔍 Semantic search using embeddings
-
-🧠 Local LLM inference with Qwen 2.5
-
-❌ Zero hallucination (document-only answers)
-
-🔁 Rebuildable vector index
-
-🌐 Simple web UI
-
-🏗️ Architecture
-User Query
-    ↓
-Embedding Model
-    ↓
-FAISS Vector Store
-    ↓
-Top-K Relevant Chunks
-    ↓
-Qwen 2.5 (Local via Ollama)
-    ↓
-Final Answer
-
-🧩 Tech Stack
-Backend
-
-Python
-
-Flask
-
-FAISS
-
-Custom RAG pipeline
-
-Ollama (Qwen 2.5 – Local LLM)
-
-Frontend
-
-React (Vite)
-
-HTML / CSS / JavaScript
-
-Models
-
-LLM: Qwen 2.5 (Local)
-
-Embeddings: Sentence Transformers / Ollama embeddings
-
-📁 Project Structure
-rag-chatbot/
-│
-├── backend/
-│   ├── app.py
-│   ├── rag.py
-│   ├── embeddings.py
-│   ├── data/
-│   │   └── documents/
-│   └── vector_store/
-│
-├── frontend/
-│   ├── src/
-│   └── package.json
-│
-├── requirements.txt
-└── README.md
-
-⚙️ Setup & Run
-1️⃣ Install Ollama & Qwen 2.5
-ollama pull qwen2.5
+## 🚀 Features
+- 📂 Document-based question answering  
+- 🔍 Semantic search using embeddings  
+- 🧠 Local LLM inference with Qwen 2.5  
+- ❌ Zero hallucination (document-only answers)  
+- 🔁 Rebuildable vector index  
+- 🌐 Simple and lightweight web UI  
 
 
-Verify:
 
-ollama list
 
-2️⃣ Backend
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
 
-3️⃣ Frontend
-cd frontend
-npm install
-npm run dev
+---
 
-🔍 How It Works
+## 🔐 Key Design Principle
+This system enforces **strict document grounding**:
+- No external knowledge  
+- No hallucinations  
+- No internet calls  
+- Answers generated only from document context  
 
-Documents are split into small chunks
+---
 
-Each chunk is embedded and stored in FAISS
+## 📊 Use Cases
+- Private document Q&A  
+- Enterprise knowledge base search  
+- Legal and policy analysis  
+- Offline AI assistants  
+- Secure internal tools  
 
-User submits a query
+---
 
-Top-K relevant chunks are retrieved
+## 🚀 Future Enhancements
+- Multi-document upload support  
+- Role-based access control  
+- Streaming responses  
+- Metadata-based filtering  
+- Dockerized deployment  
 
-Qwen 2.5 generates an answer using only retrieved context
+---
 
-If no relevant context is found, the system responds:
+## 👤 Author
+**Vaisakh M**  
+Machine Learning & AI Developer  
 
-No relevant information found in the document.
+LinkedIn: https://www.linkedin.com/in/vaisakh-manikandan-339663283/
+
+---
+
+## 📜 License
+This project is intended for educational and internal use.  
+Ensure compliance with model and dataset licenses before commercial deployment.
+
