@@ -1,4 +1,4 @@
-# 🤖 RAG Chatbot – Local LLM (Qwen 2.5)
+# 🤖 RAG Chatbot
 
 A **Retrieval-Augmented Generation (RAG) chatbot** that answers questions **strictly based on uploaded documents**, powered by **Qwen 2.5 running locally via Ollama**.  
 No external APIs. No data leakage. Fully offline and privacy-first.
