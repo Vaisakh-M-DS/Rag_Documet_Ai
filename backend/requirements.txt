@@ -1,0 +1,11 @@
+flask
+flask-cors
+pypdf
+sentence-transformers
+faiss-cpu
+python-dotenv
+requests
+ollama
+gunicorn
+tqdm
+numpy
